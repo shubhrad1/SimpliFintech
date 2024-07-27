@@ -1,0 +1,7 @@
+{
+    "CodeGPT.apiKey": "Anthropic",
+    "CodeGPT.Autocomplete.provider": "Ollama - codestral:latest",
+    "CodeGPT.Autocomplete.maxTokens": 192,
+    "CodeGPT.Autocomplete.enabled": true,
+    "CodeGPT.Autocomplete.suggestionDelay": 700
+}

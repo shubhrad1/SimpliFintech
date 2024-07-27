@@ -1,38 +1,39 @@
 'use strict';
-const {Model,Sequelize}=require('sequelize');
+const {Model,Sequelize,DataTypes}=require('sequelize');
+const { v4: uuidv4 } = require('uuid');
 const { sequelize } = require('../../config/sequelizer_init');
 module.exports=sequelize.define('users',{
     id: {
-        type: Sequelize.UUID,
-        defaultValue:Sequelize.UUIDV4,
+        type: DataTypes.UUID,
+        defaultValue:uuidv4,
         autoIncrement: false,
         primaryKey: true,
         unique: true
         },
         fname: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
         },
         lname: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: true
         },
         uname: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
         },
         password: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
         },
         createdAt: {
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.literal('CURRENT_TIMESTAMP'),
         allowNull: false
         },
         updatedAt: {
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.literal('CURRENT_TIMESTAMP'),
         allowNull: false
         }
     },{

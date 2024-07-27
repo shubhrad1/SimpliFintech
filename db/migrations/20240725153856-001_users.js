@@ -19,13 +19,26 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true
       },
-      uname: {
+      email: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+      uname: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique:true
       },
       password: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+      balance:{
+        type:Sequelize.DECIMAL,
+        allowNull: true
+      },
+      budget:{
+        type:Sequelize.DECIMAL,
+        allowNull: true
       },
       createdAt: {
         type: Sequelize.DATE,
@@ -36,11 +49,11 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         allowNull: false
-      }
+      },
     })
   },
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.dropTable('Users')
+    return queryInterface.dropTable('users')
   }
 };
