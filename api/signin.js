@@ -5,7 +5,7 @@ import express from 'express';
 
 //import signinquery from '../graphql/queries/signin_query.js';
 import dotenv from 'dotenv';
-import passwordfetch from '../graphql/queries/passwordfetch_query.js';
+import passwordfetch from '../graphql/queries/user/passwordfetch_query.js';
 
 dotenv.config();
 

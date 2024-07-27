@@ -3,7 +3,10 @@ import express from 'express';
 import cors from 'cors';
 import signuprouter from './api/signup.js';
 import signinrouter from './api/signin.js';
-
+import createtransaction from './api/createtransaction.js';
+import readtransaction from './api/readtransaction.js';
+import updatetransaction from './api/updatetransaction.js';
+import deletetransaction from './api/deletetransaction.js';
 dotenv.config();
 
 
@@ -49,4 +52,7 @@ console.log("[SERVER] Server listening at port:",port)
 // fetchData().catch((error) => console.error(error));
 app.use('/api',signuprouter);
 app.use('/api/signin',signinrouter);
-
+app.use('/api/createtransaction',createtransaction);
+app.use('/api/readtransaction',readtransaction);
+app.use('/api/updatetransaction',updatetransaction);
+app.use('/api/deletetransaction',deletetransaction);

@@ -3,8 +3,8 @@ import jwt from 'jsonwebtoken' ;
 import bodyparser from 'body-parser';
 import express from 'express';
 
-import checkuserquery from '../graphql/queries/checkuser_query.js';
-import insertuser from '../graphql/queries/signup_query.js';
+import checkuserquery from '../graphql/queries/user/checkuser_query.js';
+import insertuser from '../graphql/queries/user/signup_query.js';
 //import fetchData from './runner.js';
 import dotenv from 'dotenv';
 
